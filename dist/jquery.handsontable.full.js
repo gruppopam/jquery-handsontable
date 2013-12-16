@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  * http://handsontable.com/
  *
- * Date: Wed Nov 27 2013 14:18:10 GMT+0100 (CET)
+ * Date: Mon Dec 16 2013 14:44:48 GMT+0530 (IST)
  */
 /*jslint white: true, browser: true, plusplus: true, indent: 4, maxerr: 50 */
 
@@ -3471,6 +3471,8 @@ Handsontable.TableView.prototype.maximumVisibleElementHeight = function (top) {
     this.setCopyableText = function () {
 
       var selection = instance.getSelected();
+      if (selection === undefined) return;
+
       var settings = instance.getSettings();
       var copyRowsLimit = settings.copyRowsLimit;
       var copyColsLimit = settings.copyColsLimit;

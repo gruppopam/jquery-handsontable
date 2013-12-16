@@ -311,6 +311,8 @@
     this.setCopyableText = function () {
 
       var selection = instance.getSelected();
+      if (selection === undefined) return;
+
       var settings = instance.getSettings();
       var copyRowsLimit = settings.copyRowsLimit;
       var copyColsLimit = settings.copyColsLimit;
